@@ -1,0 +1,12 @@
+{
+	"coveragePathIgnorePatterns": ["<rootDir>/node_modules"],
+	"collectCoverageFrom": ["src/**/*.js"],
+	"transform": {
+		".*": "./node_modules/babel-jest"
+	},
+	"testRegex": "./src/.*\\.spec\\.js$",
+	"rootDir": "./",
+	"modulePaths": ["./"],
+	"moduleNameMapper": {
+	}
+}
