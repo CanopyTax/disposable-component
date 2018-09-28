@@ -1,4 +1,6 @@
 import { Observable } from "rx";
+import { Observable as Observable6 } from "rxjs"
+import { finalize } from "rxjs/operators"
 
 export default function mountComponent(mount, unmount) {
   return Observable.create(observer => {
@@ -8,4 +10,16 @@ export default function mountComponent(mount, unmount) {
       observer.onError.bind(observer)
     );
   }).finally(unmount);
+}
+
+export function mountDisposableComponent(mount, unmount) {
+  return Observable6.create( observer => {
+    mount(
+      observer.next.bind(observer),
+      observer.complete.bind(observer),
+      observer.error.bind(observer)
+    )
+  }).pipe(
+    finalize(unmount)
+  )
 }
