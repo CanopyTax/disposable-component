@@ -1,4 +1,5 @@
-import mountComponent, { mountDisposableComponent } from './disposable-component.js';
+import mountComponent from './rx4.js';
+import mountDisposableComponent  from './rx6.js';
 
 describe('Disposable Component', function() {
   it('should execute the mount life-cycle lazily', function() {
