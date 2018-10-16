@@ -1,26 +1,37 @@
 {
   "name": "disposable-component",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A simple reactive API for mounting and unmounting components to the DOM",
-  "main": "lib/disposable-component.js",
+  "main": "rx4.js",
   "repository": "https://github.com/CanopyTax/disposable-component",
   "author": "Bret Little <bret.little@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "babel src --out-dir lib --source-maps",
+    "prepublish": "npm run dev",
+    "build": "webpack --mode production",
     "test": "jest --coverage --config ./jest.json",
-    "test-watch": "jest --watch --config ./jest.json"
+    "test-watch": "jest --watch --config ./jest.json",
+    "dev": "webpack --mode development"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
     "babel-cli": "^6.26.0",
-    "babel-jest": "^21.2.0",
     "babel-preset-es2015": "^6.24.1",
     "jest": "^21.2.1",
-    "rx": "^4.1.0"
+    "rx": "^4.1.0",
+    "rxjs": "^6.3.3"
   },
   "files": [
     "lib",
     "src"
-  ]
+  ],
+  "dependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
 }
