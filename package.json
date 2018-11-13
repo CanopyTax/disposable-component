@@ -2,7 +2,7 @@
   "name": "disposable-component",
   "version": "0.3.0",
   "description": "A simple reactive API for mounting and unmounting components to the DOM",
-  "main": "rx4.js",
+  "main": "lib/rx4.js",
   "repository": "https://github.com/CanopyTax/disposable-component",
   "author": "Bret Little <bret.little@gmail.com>",
   "license": "MIT",

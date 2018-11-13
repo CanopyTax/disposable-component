@@ -11,7 +11,7 @@ module.exports = {
     filename: "[name].js",
     library: "disposable-component",
     libraryTarget: "umd",
-    path: path.resolve(__dirname, "."),
+    path: path.resolve(__dirname, "lib"),
   },
   module: {
     rules: [
