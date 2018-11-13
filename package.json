@@ -1,6 +1,6 @@
 {
   "name": "disposable-component",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A simple reactive API for mounting and unmounting components to the DOM",
   "main": "lib/rx4.js",
   "repository": "https://github.com/CanopyTax/disposable-component",
