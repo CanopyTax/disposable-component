@@ -8,7 +8,6 @@
       {
         "exactGlobals": true,
         "globals": {
-          "rx4": "disposableComponent",
           "rx6": "disposableComponent",
         },
       },

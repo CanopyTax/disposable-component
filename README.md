@@ -9,7 +9,7 @@ interop inside your single-page-app.
 ## Setup
 
 ```
-npm install --save rx disposable-component
+npm install --save disposable-component
 ```
 
 ### Usage
@@ -17,18 +17,18 @@ A simple example would be to use `disposable-component` to build a
 react-modal:
 
 ```js
-import mountComponent from "disposable-component";
 import React from "react";
 import ReactDOM from "react-dom";
+import mountComponent from "disposable-component";
 
 function showModal(El, props) {
   return mountComponent(
-    function mount(onNext, onCompleted, onError) {
+    function mount(next, complete, error) {
       el = document.createElement("div");
       document.body.appendChild(el);
 
       ReactDOM.render(
-        <El {...props} close={onCompleted} onNext={onNext} />,
+        <El {...props} close={complete} next={next} />,
         el
       );
     },
@@ -43,8 +43,8 @@ const subscription = showModal(function MyModal() {
   return (
     <div>
       <h1>My Modal</h1>
-      <button onClick={this.props.onCompleted}>Close</button>
-      <button onClick={this.props.onNext.bind(null, 1)}>Save</button>
+      <button onClick={this.props.complete}>Close</button>
+      <button onClick={this.props.next.bind(null, 1)}>Save</button>
     </div>
   );
 }).subscribe(
@@ -52,5 +52,5 @@ const subscription = showModal(function MyModal() {
   err => console.error(err)
 );
 
-subscription.dispose(); // close the modal
+subscription.unsubscribe(); // close the modal
 ```
