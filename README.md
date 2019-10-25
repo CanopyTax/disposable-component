@@ -1,5 +1,5 @@
 # disposable-component
-Disposable-component providse a simple reactive API for mounting and
+Disposable-component provides a simple reactive API for mounting and
 unmounting components to the DOM. This is useful for cross framework
 interop inside your single-page-app.
 
