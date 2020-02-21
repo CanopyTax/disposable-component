@@ -28,7 +28,6 @@
     "rimraf": "^2.6.3"
   },
   "dependencies": {
-    "rx": "^4.1.0",
     "rxjs": "^6.4.0"
   },
   "files": [
